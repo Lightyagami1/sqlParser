@@ -1,0 +1,18 @@
+fin ft
+fin tf
+cp Rec Sub
+proj Name Department from RecSub
+select Pointer < 9.33 from RecSubproj
+
+for union test:
+  > from RecSub
+    - select Name = Saurav from RecSub
+    - reTab RecSub s1
+    - select Name = Rohit from RecSub
+    - union s1 RecSubproj
+
+for setDifference:
+  > select Name = Saurav and Random < 7 from RecSub
+  > select Name = Saurav and Random < 6 from RecSub
+  > reTab RecSubsel as
+  > setdiff as RecSubsel
